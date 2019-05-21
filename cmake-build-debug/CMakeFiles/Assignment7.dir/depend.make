@@ -18,7 +18,5 @@ CMakeFiles/Assignment7.dir/src/main.cpp.o: ../src/BadRequestException.h
 CMakeFiles/Assignment7.dir/src/main.cpp.o: ../src/CommandNotFoundException.h
 CMakeFiles/Assignment7.dir/src/main.cpp.o: ../src/Errors.h
 CMakeFiles/Assignment7.dir/src/main.cpp.o: ../src/PermissionDeniedException.h
-CMakeFiles/Assignment7.dir/src/main.cpp.o: ../src/Publisher.h
-CMakeFiles/Assignment7.dir/src/main.cpp.o: ../src/User.h
 CMakeFiles/Assignment7.dir/src/main.cpp.o: ../src/main.cpp
 

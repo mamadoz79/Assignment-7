@@ -1,3 +1,4 @@
+/*
 #include "Publisher.h"
 
 Publisher::Publisher(string email, string username, string password, int age) :
@@ -5,3 +6,4 @@ Publisher::Publisher(string email, string username, string password, int age) :
              username,
              password,
              age) {}
+*/

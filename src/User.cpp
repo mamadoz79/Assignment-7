@@ -1,9 +1,9 @@
 #include "User.h"
 
 User::User(string email, string username, string password, int age) :
-        email(std::move(email)),
-        username(std::move(username)),
-        password(std::move(password)),
+        email(email),
+        username(username),
+        password(password),
         age(age) {}
 
 string User::getEmail() {
@@ -21,3 +21,27 @@ string User::getPassword() {
 int User::getAge() {
     return age;
 }
+
+vector<User> User::getUsers() {
+    return users;
+}
+
+bool User::isUserAvailable(const string &username) {
+    for (User user : users) {
+        if (user.getUsername() == username) {
+            return true;
+        }
+    }
+    return false;
+}
+
+User User::Login(const string& username, const string& password) {
+    for (User user : users) {
+        if (user.getUsername() == username && user.getPassword() == password) {
+            loggedUser = user;
+            return user;
+        }
+    }
+}
+
+User::User() {}

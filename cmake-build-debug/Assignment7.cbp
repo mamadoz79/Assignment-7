@@ -120,6 +120,9 @@
 		<Unit filename="/home/mamad/CLionProjects/Assignment7/src/main.cpp">
 			<Option target="Assignment7"/>
 		</Unit>
+		<Unit filename="/home/mamad/CLionProjects/Assignment7/src/structs.h">
+			<Option target="Assignment7"/>
+		</Unit>
 		<Unit filename="/home/mamad/CLionProjects/Assignment7/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
