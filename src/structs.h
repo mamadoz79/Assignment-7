@@ -1,12 +1,16 @@
 #include <bits/stdc++.h>
 
-using namespace std;
+#ifndef STRUCTS_H
+#define STRUCTS_H
 
-typedef struct {
-    vector<string> massage;
-} notification;
+struct notification{
+    std::vector<std::string> massage;
+};
 
-typedef struct {
+struct comment{
     int commentId;
-    string content;
-} comment;
+    std::vector<std::string> replies;
+    std::string content;
+};
+
+#endif STRUCTS_H

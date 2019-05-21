@@ -2,12 +2,15 @@
 #include <vector>
 #include "structs.h"
 
+
+#ifndef ASSIGNMENT7_USER_H
+#define ASSIGNMENT7_USER_H
+
+
 using namespace std;
 
 class User {
 private:
-    static User loggedUser;
-    static vector<User> users;
     string email;
     string username;
     string password;
@@ -24,10 +27,6 @@ public:
     string getPassword();
 
     int getAge();
-
-    static vector<User> getUsers();
-
-    static bool isUserAvailable(const string& username);
-
-    static User Login(const string& username, const string& password);
 };
+
+#endif

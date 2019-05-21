@@ -22,26 +22,4 @@ int User::getAge() {
     return age;
 }
 
-vector<User> User::getUsers() {
-    return users;
-}
-
-bool User::isUserAvailable(const string &username) {
-    for (User user : users) {
-        if (user.getUsername() == username) {
-            return true;
-        }
-    }
-    return false;
-}
-
-User User::Login(const string& username, const string& password) {
-    for (User user : users) {
-        if (user.getUsername() == username && user.getPassword() == password) {
-            loggedUser = user;
-            return user;
-        }
-    }
-}
-
 User::User() {}
