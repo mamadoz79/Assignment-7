@@ -1,19 +1,27 @@
 #include <bits/stdc++.h>
 #include "structs.h"
 
-using namespace std;
-
 class Film {
 private:
-    string name;
-    string filmID;
-    string director;
-    float rate;
+    std::string name;
+    int filmID;
+    std::string director;
+    float rate = 0;
     int price;
     int length;
     int productionYear;
-    vector<int> scores;
-    vector<comment> comments;
+    std::vector<int> scores;
+    std::vector<comment> comments;
 public:
-    Film(const string &name, const string &filmId, const string &director, int price, int lenght, int productionYear);
+    Film(const std::string &name, const std::string &director, int price, int lenght, int productionYear);
+
+    void calculateRate();
+
+    void setFilmId(int filmId);
+
+    void addComment(std::string msg);
+
+    void printComments();
+
+    void printState();
 };

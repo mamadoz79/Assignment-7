@@ -5,28 +5,32 @@
 
 #ifndef ASSIGNMENT7_USER_H
 #define ASSIGNMENT7_USER_H
-
-
-using namespace std;
-
 class User {
 private:
-    string email;
-    string username;
-    string password;
+    std::string email;
+    std::string username;
+    std::string password;
     int age;
+    int userID;
+    int money = 0;
 public:
-    User(string email, string username, string password, int age);
+    User(std::string email, std::string username, std::string password, int age);
 
     User();
 
-    string getEmail();
+    std::string getEmail();
 
-    string getUsername();
+    std::string getUsername();
 
-    string getPassword();
+    std::string getPassword();
 
     int getAge();
+
+    int getmoney();
+
+    void addMoney(int money);
+
+    void setUserId(int userId);
 };
 
 #endif

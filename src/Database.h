@@ -3,25 +3,23 @@
 #include "Film.h"
 #include "structs.h"
 
-using namespace std;
-
 class Database {
 private:
-    vector<User> users;
-    vector<Film> films;
+    std::vector<User*> users;
+    std::vector<Film*> films;
 
 public:
-    string hashPassword(string password);
+    std::string hashPassword(std::string password);
 
-    const vector<User> &getUsers() const;
+    const std::vector<User*> &getUsers() const;
 
-    const vector<Film> &getFilms() const;
+    const std::vector<Film*> &getFilms() const;
 
-    void addUser(const User& user);
+    void addUser(User* user);
 
-    void addFilm(const Film& film);
+    void addFilm(Film* film);
 
-    bool isUserAvailable(const string& username);
+    bool isUserAvailable(const std::string& username);
 
-    User Login(const string& username, const string& password);
+    User* login(const std::string& username, const std::string& password);
 };

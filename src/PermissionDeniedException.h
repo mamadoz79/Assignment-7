@@ -1,11 +1,9 @@
 #include <iostream>
 
-using namespace std;
-
-class PermissionDeniedException : public exception {
+class PermissionDeniedException : public std::exception {
 public:
     PermissionDeniedException();
 
 private:
-    string msg = "Permission Denied";
+    std::string msg = "Permission Denied";
 };

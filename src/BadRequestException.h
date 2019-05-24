@@ -1,11 +1,9 @@
 #include <iostream>
 
-using namespace std;
-
-class BadRequestException : public exception {
+class BadRequestException : public std::exception {
 public:
     BadRequestException();
 
 private:
-    string msg = "Bad Request";
+    std::string msg = "Bad Request";
 };

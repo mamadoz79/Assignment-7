@@ -1,11 +1,9 @@
 #include <iostream>
 
-using namespace std;
-
-class CommandNotFoundException : public exception {
+class CommandNotFoundException : public std::exception {
 public:
     CommandNotFoundException();
 
 private:
-    string msg = "Not Found";
+    std::string msg = "Not Found";
 };

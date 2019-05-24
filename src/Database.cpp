@@ -1,7 +1,10 @@
 #include "Database.h"
+
+using namespace std;
+
 string Database::hashPassword(string password) {
     reverse(password.begin(), password.end());
-    for (char & i : password) {
+    for (char &i : password) {
         if (i == 'a')
             i = *"\u0444";
         else if (i == 'b')
@@ -40,35 +43,38 @@ string Database::hashPassword(string password) {
     return password;
 }
 
-const vector<User> &Database::getUsers() const {
+const vector<User *> &Database::getUsers() const {
     return users;
 }
 
-const vector<Film> &Database::getFilms() const {
+const vector<Film *> &Database::getFilms() const {
     return films;
 }
 
-void Database::addUser(const User& user) {
+void Database::addUser(User *user) {
     users.push_back(user);
+    user->setUserId(users.size());
 }
 
-void Database::addFilm(const Film& film) {
+void Database::addFilm(Film *film) {
     films.push_back(film);
+    film->setFilmId(films.size());
 }
 
 bool Database::isUserAvailable(const string &username) {
-    for (User user : users) {
-        if (user.getUsername() == username) {
+    for (User *user : users) {
+        if (user->getUsername() == username) {
             return true;
         }
     }
     return false;
 }
 
-User Database::Login(const string &username, const string &password) {
-    for (User user : users) {
-        if (user.getUsername() == username && user.getPassword() == password) {
+User *Database::login(const string &username, const string &password) {
+    for (User *user : users) {
+        if (user->getUsername() == username && user->getPassword() == password) {
             return user;
         }
     }
+    return nullptr;
 }

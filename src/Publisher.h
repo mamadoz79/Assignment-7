@@ -5,12 +5,9 @@
 
 #ifndef ASSIGNMENT7_PUBLISHER_H
 #define ASSIGNMENT7_PUBLISHER_H
-
-using namespace std;
-
 class Publisher : public User{
 public:
-    Publisher(string email, string username, string password, int age);
+    Publisher(const std::string &email, const std::string &username, const std::string &password, int age);
 };
 
-#endif //ASSIGNMENT7_PUBLISHER_H
+#endif
