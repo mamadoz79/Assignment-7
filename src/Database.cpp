@@ -1,4 +1,5 @@
 #include "Database.h"
+#include "User.h"
 
 using namespace std;
 
@@ -53,12 +54,12 @@ const vector<Film *> &Database::getFilms() const {
 
 void Database::addUser(User *user) {
     users.push_back(user);
-    user->setUserId(users.size());
+    user->setUserId(userIDBase++);
 }
 
 void Database::addFilm(Film *film) {
     films.push_back(film);
-    film->setFilmId(films.size());
+    film->setFilmId(filmIDBase++);
 }
 
 bool Database::isUserAvailable(const string &username) {
@@ -77,4 +78,17 @@ User *Database::login(const string &username, const string &password) {
         }
     }
     return nullptr;
+}
+
+Film *Database::findFilmByID(int id) {
+    for (auto a : films) {
+        if(a->getFilmID() == id) {
+            return a;
+        }
+    }
+    return nullptr;
+}
+
+void Database::deleteFilm(int id) {
+    remove(films.begin(), films.end(), findFilmByID(id));
 }

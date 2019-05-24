@@ -4,12 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/mamad/CLionProjects/Assignment7/src/BadRequestException.cpp" "/home/mamad/CLionProjects/Assignment7/cmake-build-debug/CMakeFiles/Assignment7.dir/src/BadRequestException.cpp.o"
-  "/home/mamad/CLionProjects/Assignment7/src/CommandNotFoundException.cpp" "/home/mamad/CLionProjects/Assignment7/cmake-build-debug/CMakeFiles/Assignment7.dir/src/CommandNotFoundException.cpp.o"
-  "/home/mamad/CLionProjects/Assignment7/src/PermissionDeniedException.cpp" "/home/mamad/CLionProjects/Assignment7/cmake-build-debug/CMakeFiles/Assignment7.dir/src/PermissionDeniedException.cpp.o"
-  "/home/mamad/CLionProjects/Assignment7/src/Publisher.cpp" "/home/mamad/CLionProjects/Assignment7/cmake-build-debug/CMakeFiles/Assignment7.dir/src/Publisher.cpp.o"
-  "/home/mamad/CLionProjects/Assignment7/src/User.cpp" "/home/mamad/CLionProjects/Assignment7/cmake-build-debug/CMakeFiles/Assignment7.dir/src/User.cpp.o"
-  "/home/mamad/CLionProjects/Assignment7/src/main.cpp" "/home/mamad/CLionProjects/Assignment7/cmake-build-debug/CMakeFiles/Assignment7.dir/src/main.cpp.o"
+  "A:/Programming/Projects/Assignment7/Assignment-7/src/BadRequestException.cpp" "A:/Programming/Projects/Assignment7/Assignment-7/cmake-build-debug/CMakeFiles/Assignment7.dir/src/BadRequestException.cpp.obj"
+  "A:/Programming/Projects/Assignment7/Assignment-7/src/CommandNotFoundException.cpp" "A:/Programming/Projects/Assignment7/Assignment-7/cmake-build-debug/CMakeFiles/Assignment7.dir/src/CommandNotFoundException.cpp.obj"
+  "A:/Programming/Projects/Assignment7/Assignment-7/src/Database.cpp" "A:/Programming/Projects/Assignment7/Assignment-7/cmake-build-debug/CMakeFiles/Assignment7.dir/src/Database.cpp.obj"
+  "A:/Programming/Projects/Assignment7/Assignment-7/src/PermissionDeniedException.cpp" "A:/Programming/Projects/Assignment7/Assignment-7/cmake-build-debug/CMakeFiles/Assignment7.dir/src/PermissionDeniedException.cpp.obj"
+  "A:/Programming/Projects/Assignment7/Assignment-7/src/Publisher.cpp" "A:/Programming/Projects/Assignment7/Assignment-7/cmake-build-debug/CMakeFiles/Assignment7.dir/src/Publisher.cpp.obj"
+  "A:/Programming/Projects/Assignment7/Assignment-7/src/User.cpp" "A:/Programming/Projects/Assignment7/Assignment-7/cmake-build-debug/CMakeFiles/Assignment7.dir/src/User.cpp.obj"
+  "A:/Programming/Projects/Assignment7/Assignment-7/src/main.cpp" "A:/Programming/Projects/Assignment7/Assignment-7/cmake-build-debug/CMakeFiles/Assignment7.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

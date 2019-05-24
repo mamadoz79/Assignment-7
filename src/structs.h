@@ -13,4 +13,4 @@ struct comment{
     std::string content;
 };
 
-#endif STRUCTS_H
+#endif //STRUCTS_H

@@ -10,4 +10,4 @@ public:
 };
 
 
-#endif
+#endif //ASSIGNMENT7_VIEWER_H

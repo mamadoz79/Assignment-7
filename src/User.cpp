@@ -1,4 +1,5 @@
 #include "User.h"
+#include "Film.h"
 
 User::User(std::string email, std::string username, std::string password, int age) :
         email(email),
@@ -6,6 +7,7 @@ User::User(std::string email, std::string username, std::string password, int ag
         password(password),
         age(age)
         {}
+User::User() = default;
 
 std::string User::getEmail() {
     return email;
@@ -22,16 +24,28 @@ std::string User::getPassword() {
 int User::getAge() {
     return age;
 }
-int User::getmoney() {
+
+int User::getMoney() {
     return money;
 }
-
-User::User() {}
 
 void User::setUserId(int userId) {
     userID = userId;
 }
 
+int User::getID() {
+	return userId;
+}
+
 void User::addMoney(int money) {
     this->money += money;
+}
+
+void User::buyFilm(Film *film, int money) {
+    films.push_back(film);
+    this->money -= money;
+}
+
+void User::getType() {
+	return type;
 }

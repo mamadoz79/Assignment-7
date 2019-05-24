@@ -1,10 +1,15 @@
 #include <bits/stdc++.h>
-#include "User.h"
-#include "Film.h"
 #include "structs.h"
+
+#ifndef ASSIGNMENT7_DATABASE_H
+#define ASSIGNMENT7_DATABASE_H
+
+class User;
 
 class Database {
 private:
+    int filmIDBase = 1;
+    int userIDBase = 1;
     std::vector<User*> users;
     std::vector<Film*> films;
 
@@ -22,4 +27,10 @@ public:
     bool isUserAvailable(const std::string& username);
 
     User* login(const std::string& username, const std::string& password);
+    
+    Film* findFilmByID(int id);
+
+    void deleteFilm(int id);
 };
+
+#endif //ASSIGNMENT7_DATABASE_H

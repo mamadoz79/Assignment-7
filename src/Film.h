@@ -1,11 +1,13 @@
 #include <bits/stdc++.h>
 #include "structs.h"
 
+class User;
+
 class Film {
 private:
     std::string name;
     int filmID;
-    std::string director;
+    User* director;
     float rate = 0;
     int price;
     int length;
@@ -24,4 +26,8 @@ public:
     void printComments();
 
     void printState();
+
+    int getFilmID() const;
+
+    int getPrice() const;
 };

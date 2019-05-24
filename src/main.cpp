@@ -56,16 +56,28 @@ int main() {
                 } else if (v[1] == "rate") {
 
                 } else if (v[1] == "buy") {
-
+                    Film *film = database.findFilmByID(stoi(v[4]));
+                    if (film->getPrice() > loggedUser->getMoney()) {
+                        throw (BadRequestException());
+                    } else {
+                        loggedUser->buyFilm(film, film->getPrice());
+                        cout << "OK" << endl;
+                    }
                 } else {
                     throw (BadRequestException());
                 }
 
             } else if (v[0] == "DELETE") {
                 if (v[1] == "films") {
-                    //dynamic_cast<User*> (&loggedUser) != nullptr ? //hast : //nist;
-
-
+                    if(loggedUser->getType() == "Publisher") {
+                        if (database.findFilmByID(stoi(v[4])) != nullptr) {
+                            database.deleteFilm(stoi(v[4]));
+                        } else {
+                            cout << "Not Found" << endl;
+                        }
+                    } else {
+                        throw (PermissionDeniedException());
+                    }
                 } else if (v[1] == "comments") {
 
                 }
@@ -75,6 +87,15 @@ int main() {
                 } else if (v[1] == "published") {
 
 
+                } else if (v[1] == "followers") {
+                    if(loggedUser->getType() == "Publisher") {
+                        cout << "List of followers" << endl;
+                        for (int i = 1; i <= loggedUser->followers.size(); i++) {
+                            cout << i << ". " << followers[i].getID() << " | " << followers[i].getUsername() + " | " + followers[i].getEmail() << endl;
+                        }
+                    } else {
+                        throw (PermissionDeniedException());
+                    }
                 } else if (v[1] == "films") {
 
                 } else if (v[1] == "purchased") {

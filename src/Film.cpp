@@ -1,8 +1,5 @@
-//
-// Created by mamad on 5/21/19.
-//
-
 #include "Film.h"
+#include "User.h"
 
 using namespace std;
 
@@ -42,6 +39,14 @@ void Film::printComments() {
             cout << a.commentId << "." << ++i << "." << b << endl;
         }
     }
+}
+
+int Film::getFilmID() const {
+    return filmID;
+}
+
+int Film::getPrice() const {
+    return price;
 }
 
 
