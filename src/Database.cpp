@@ -1,5 +1,4 @@
 #include "Database.h"
-#include "User.h"
 
 using namespace std;
 

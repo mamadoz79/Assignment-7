@@ -5,6 +5,7 @@
 #include "Publisher.h"
 #include "Viewer.h"
 #include "Database.h"
+#include "Film.h"
 
 class Publisher;
 
@@ -90,8 +91,11 @@ int main() {
                 } else if (v[1] == "followers") {
                     if(loggedUser->getType() == "Publisher") {
                         cout << "List of followers" << endl;
-                        for (int i = 1; i <= loggedUser->followers.size(); i++) {
-                            cout << i << ". " << followers[i].getID() << " | " << followers[i].getUsername() + " | " + followers[i].getEmail() << endl;
+                        auto* publisher = (Publisher*) (loggedUser);
+                        for (int i = 1; i <= publisher->getFollowers().size(); i++) {
+                            User* follower = publisher->getFollowers()[i];
+                            cout << i << ". " << follower->getID() << " | " << follower->getUsername();
+                            cout << " | " + follower->getEmail() << endl;
                         }
                     } else {
                         throw (PermissionDeniedException());

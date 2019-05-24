@@ -1,7 +1,7 @@
 #ifndef ASSIGNMENT7_VIEWER_H
 #define ASSIGNMENT7_VIEWER_H
 
-
+#include <bits/stdc++.h>
 #include "User.h"
 
 class Viewer : public User {

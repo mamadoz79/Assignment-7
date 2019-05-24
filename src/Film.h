@@ -1,13 +1,14 @@
+#ifndef ASSIGNMENT7_FILM_H
+#define ASSIGNMENT7_FILM_H
+
 #include <bits/stdc++.h>
 #include "structs.h"
-
-class User;
 
 class Film {
 private:
     std::string name;
     int filmID;
-    User* director;
+    std::string director;
     float rate = 0;
     int price;
     int length;
@@ -15,7 +16,7 @@ private:
     std::vector<int> scores;
     std::vector<comment> comments;
 public:
-    Film(const std::string &name, const std::string &director, int price, int lenght, int productionYear);
+    Film(const std::string &name, const std::string &director, int price, int length, int productionYear);
 
     void calculateRate();
 
@@ -31,3 +32,5 @@ public:
 
     int getPrice() const;
 };
+
+#endif

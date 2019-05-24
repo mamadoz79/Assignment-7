@@ -1,10 +1,10 @@
-#include <bits/stdc++.h>
-#include "structs.h"
-
 #ifndef ASSIGNMENT7_DATABASE_H
 #define ASSIGNMENT7_DATABASE_H
 
-class User;
+#include <bits/stdc++.h>
+#include "structs.h"
+#include "Film.h"
+#include "User.h"
 
 class Database {
 private:

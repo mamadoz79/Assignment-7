@@ -1,7 +1,8 @@
 #include "User.h"
-#include "Film.h"
 
-User::User(std::string email, std::string username, std::string password, int age) :
+using namespace std;
+
+User::User(string email, string username, string password, int age) :
         email(email),
         username(username),
         password(password),
@@ -34,7 +35,7 @@ void User::setUserId(int userId) {
 }
 
 int User::getID() {
-	return userId;
+	return userID;
 }
 
 void User::addMoney(int money) {
@@ -46,6 +47,6 @@ void User::buyFilm(Film *film, int money) {
     this->money -= money;
 }
 
-void User::getType() {
+string User::getType() {
 	return type;
 }

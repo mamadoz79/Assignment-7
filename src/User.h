@@ -1,9 +1,8 @@
-#include <bits/stdc++.h>
-
 #ifndef ASSIGNMENT7_USER_H
 #define ASSIGNMENT7_USER_H
 
-class Film;
+#include <bits/stdc++.h>
+#include "Film.h"
 
 class User {
 private:
@@ -13,9 +12,10 @@ private:
     int age;
     int userID;
     int money = 0;
-    std::string type;
     std::vector<Film*> films;
 public:
+    std::string type;
+
     User(std::string email, std::string username, std::string password, int age);
 
     User();
@@ -38,7 +38,7 @@ public:
 
     void buyFilm(Film* film, int money);
 
-    void getType();
+    std::string getType();
 };
 
 #endif
